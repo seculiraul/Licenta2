@@ -1,0 +1,200 @@
+<ngx-slick-carousel class="main-slider slider" [config]="slideConfig">
+  <div
+    ngxSlickItem
+    class="slider-item"
+    style="background-image: url('assets/images/bio.jpg')"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
+          <div class="slider-caption">
+            <span class="lead">Go Bio! </span>
+            <h1 class="mt-2 mb-5">
+              <span class="text-color">20% off </span>to everything BIO
+            </h1>
+            <a href="#" class="btn btn-main">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    ngxSlickItem
+    class="slider-item"
+    style="background-image: url(assets/images/slide_2.jpg)"
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
+          <div class="slider-caption">
+            <span class="lead">Eat you fruits!</span>
+            <h1 class="mt-2 mb-5">
+              <span class="text-color">10% off</span> of any fruits
+            </h1>
+            <a href="#" class="btn btn-main">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    ngxSlickItem
+    class="slider-item"
+    style="
+      background-image: url(assets/images/dairy.jpg);
+      background-position: 50%;
+      background-repeat: no-repeat;
+    "
+  >
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-12 offset-lg-6 offset-md-6">
+          <div class="slider-caption">
+            <span class="lead">Drink your milk so you ca get big!</span>
+            <h1 class="mt-2 mb-5">
+              <span class="text-color">5% off </span>of all dairy products
+            </h1>
+            <a href="#" class="btn btn-main">Shop Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> </ngx-slick-carousel
+><!--aici se termina slideru-->
+
+<section class="category section pt-3 pb-0">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="title text-center">
+        <h2>Hottest products of this week</h2>
+        <p></p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="cat-item mb-4 mb-lg-0">
+          <img src="assets/images/rosii.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="item-info mb-4 mb-lg-0 text-center">
+          <p class="mb-0">Tomatoes</p>
+          <h4 class="mb-4">5% off</h4>
+          <a href="#" class="read-more">Shop now</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="cat-item mb-4 mb-lg-0">
+          <img src="assets/images/cartofi.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="item-info text-center">
+          <p class="mb-0">Potatoes</p>
+          <h4 class="mb-4">5% off</h4>
+          <a href="#" class="read-more">Shop now</a>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-12 col-md-6">
+        <div class="cat-item">
+          <img src="assets/images/mozzarella.jpg" alt="" class="img-fluid" />
+        </div>
+        <div class="item-info text-center">
+          <p class="mb-0">Mozzarella cheese</p>
+          <h4 class="mb-4">5% off</h4>
+          <a href="#" class="read-more">Shop now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--new arrivals-->
+
+<section class="section products-main">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="title text-center">
+          <h2>New products on the site</h2>
+          <p></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-lg-3 col-12 col-md-6 col-sm-6 mb-5"
+        *ngFor="let product of newProducts"
+      >
+        <div class="product">
+          <div class="product-wrap">
+            <a [routerLink]="'/product-single/' + product.id"
+              ><img
+                class="img-fluid w-100 mb-3 img-first"
+                [src]="product.img"
+                alt="product-img"
+            /></a>
+          </div>
+
+          <span class="onsale">NEW</span>
+          <div class="product-hover-overlay">
+            <a href="#"><i class="tf-ion-android-cart"></i></a>
+            <a href="#"><i class="tf-ion-ios-heart"></i></a>
+          </div>
+
+          <div class="product-info">
+            <h2 class="product-title h5 mb-0">
+              <a href="#">{{ product.nume }}</a>
+            </h2>
+            <span class="price">
+              {{ product.pret }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--in jos e bun-->
+<section class="features border-top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-md-6">
+        <div class="feature-block">
+          <i class="tf-ion-android-bicycle"></i>
+          <div class="content">
+            <h5>Free Shipping</h5>
+            <p>On all order over $39.00</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6">
+        <div class="feature-block">
+          <i class="tf-wallet"></i>
+          <div class="content">
+            <h5>30 Days Return</h5>
+            <p>Money back Guarantee</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6">
+        <div class="feature-block">
+          <i class="tf-key"></i>
+          <div class="content">
+            <h5>Secure Checkout</h5>
+            <p>100% Protected by paypal</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-sm-6 col-md-6">
+        <div class="feature-block">
+          <i class="tf-clock"></i>
+          <div class="content">
+            <h5>24/7 Support</h5>
+            <p>All time customer support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
