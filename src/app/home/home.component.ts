@@ -8,7 +8,7 @@ import { Produs } from '../produs.model';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-newProducts: Produs[] =[];
+  newProducts: Produs[] =[];
   constructor(private produsService: DataService) { }
 
   ngOnInit(): void {

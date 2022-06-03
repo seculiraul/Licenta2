@@ -10,6 +10,7 @@ export class DataService {
 
   constructor() { }
   getCategory() {
+    return [... new Set(this.produse.map(produse => produse.categorie))];
   }
 
   getForCategory(categorie: string) {
@@ -22,5 +23,9 @@ export class DataService {
 
   getProductById(id: number): Produs | undefined {
     return this.produse.find(produs => produs.id === id.toString());
+  }
+  
+  getAllProducts() {
+    return this.produse;
   }
 }
