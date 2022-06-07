@@ -3,6 +3,6 @@ export interface Produs {
     nume: string,
     img: string,
     pret: number,
-    categorie: string
+    categorie: string,
     isNew: boolean
 }
