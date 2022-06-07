@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Order } from './order.model';
 import { Produs } from './produs.model';
 
 @Injectable({
@@ -6,15 +7,18 @@ import { Produs } from './produs.model';
 })
 export class OrderService {
 
-  currentOrder: Produs[] =[];
+  currentOrder: Order[] = [];
   constructor() { }
 
 
-  addCurrentOrder(product: Produs) {
-    this.currentOrder.push(product);
+  addCurrentOrder(product: Produs, quantity: number) {
+    const orderItem: Order = {
+      product, quantity
+    };
+   this.currentOrder.push(orderItem);
   }
 
-  sdfsd() {
-    console.log(this.currentOrder);
+  getCurrentOrder() {
+    return this.currentOrder.slice();
   }
 }

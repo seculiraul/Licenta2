@@ -35,6 +35,13 @@
                   <th class="product-subtotal">Total</th>
                   <th class="product-remove"></th>
                 </tr>
+                <tr *ngFor="let orderItem of orderItems">
+                  <td class="product-thumbnail"><img [src]="orderItem?.product?.img"></td>
+                  <td class="product-name">{{ orderItem?.product?.nume }}</td>
+                  <td class="product-price">{{ orderItem?.product?.pret }}</td>
+                  <td class="product-quantity">{{ orderItem?.quantity }}</td>
+                  <td class="product-subtotal">{{ orderItem?.product?.pret }}</td>
+
               </thead>
             </table>
           </form>

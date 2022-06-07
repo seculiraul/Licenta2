@@ -21,7 +21,7 @@ export class DataService {
     return this.produse.filter(produs => produs.isNew === true);
   }
 
-  getProductById(id: number): Produs | undefined {
+  getProductById(id: number): Produs | undefined{
     return this.produse.find(produs => produs.id === id.toString());
   }
   

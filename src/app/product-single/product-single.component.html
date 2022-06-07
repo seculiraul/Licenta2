@@ -45,7 +45,6 @@
             <div class="quantity d-flex align-items-center">
               <input
                 type="number"
-                id="#"
                 class="input-text qty text form-control w-25 mr-3"
                 step="1"
                 min="1"
@@ -54,8 +53,9 @@
                 value="1"
                 title="Qty"
                 size="4"
+                #quantity
               />
-              <a href="#" class="btn btn-main btn-small">Add to cart</a>
+              <a class="btn btn-main btn-small" (click)="addToCart(quantity)">Add to cart</a>
             </div>
           </form>
 
