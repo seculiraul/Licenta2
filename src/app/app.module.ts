@@ -12,6 +12,8 @@ import { CartComponent } from './cart/cart.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ShopComponent } from './shop/shop.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { OrderPlacedComponent } from './order-placed/order-placed.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CartComponent,
     CheckoutComponent,
     ShopComponent,
-    DashboardComponent
+    DashboardComponent,
+    OrderPlacedComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    SlickCarouselModule,
+    SlickCarouselModule,  
     AppRoutingModule
   ],
   providers: [],

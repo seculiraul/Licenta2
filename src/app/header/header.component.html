@@ -28,31 +28,6 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About Us</a>
         </li>
-        <!-- Pages -->
-        <li class="nav-item dropdown dropdown-slide">
-          <a
-            class="nav-link dropdown-toggle"
-            href="#"
-            id="navbarDropdown4"
-            role="button"
-            data-delay="350"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            Pages.
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Blog Single</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">404 Page</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </li>
-        <!-- /Pages -->
-        <!-- / Blog -->
 
         <li class="nav-item dropdown dropdown-slide">
           <a
@@ -65,19 +40,15 @@
             aria-haspopup="true"
             aria-expanded="false"
           >
-            Shop.
+            Shop
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
             <li><a routerLink="/shop">Shop</a></li>
-            <li><a href="#">Product Details</a></li>
             <li><a routerLink="/checkout">Checkout</a></li>
             <li><a routerLink="/cart">Cart</a></li>
-            <li><a href="#">Confirmation</a></li>
           </ul>
         </li>
-        <!-- / Blog -->
 
-        <!-- Account -->
         <li class="nav-item dropdown dropdown-slide">
           <a
             class="nav-link dropdown-toggle"
@@ -94,7 +65,6 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown5">
             <li><a routerLink="/dashboard">Dahsboard</a></li>
             <li><a href="#">Orders</a></li>
-            <li><a href="#">Downloads</a></li>
             <li><a href="#">Address</a></li>
             <li><a href="#">Profile Details</a></li>
             <li><a href="#">Login Page</a></li>
@@ -103,24 +73,20 @@
           </ul>
         </li>
         <!-- / Account -->
-
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contact Us</a>
-        </li>
       </ul>
     </div>
     <!-- Navbar-collapse -->
 
     <ul class="top-menu list-inline mb-0 d-none d-lg-block" id="top-menu">
       <li class="list-inline-item">
-        <a href="#" class="search_toggle" id="search-icon"
+        <a routerLink="/shop" class="search_toggle" id="search-icon"
           ><i class="tf-ion-android-search"></i
         ></a>
       </li>
 
       <li class="dropdown cart-nav dropdown-slide list-inline-item">
         <a
-          href="#"
+          routerLink="/cart"
           class="dropdown-toggle cart-icon"
           data-toggle="dropdown"
           data-hover="dropdown"
@@ -128,65 +94,17 @@
           <i class="tf-ion-android-cart"></i>
         </a>
         <div class="dropdown-menu cart-dropdown">
-          <!-- Cart Item -->
-          <div class="media">
-            <a routerLink="/product-single">
-              <img
-                class="media-object img- mr-3"
-                src="assets/images/cart-1.jpg"
-                alt="image"
-              />
-            </a>
-            <div class="media-body">
-              <h6>Ladies Bag</h6>
-              <div class="cart-price">
-                <span>1 x</span>
-                <span>1250.00</span>
-              </div>
-            </div>
-            <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-          </div>
-          <!-- / Cart Item -->
-
-          <!-- Cart Item -->
-          <div class="media">
-            <a routerLink="/product-single">
-              <img
-                class="media-object img-fluid mr-3"
-                src="assets/images/cart-2.jpg"
-                alt="image"
-              />
-            </a>
-            <div class="media-body">
-              <h6>Skinny Jeans</h6>
-              <div class="cart-price">
-                <span>1 x</span>
-                <span>1250.00</span>
-              </div>
-            </div>
-            <a href="#" class="remove"><i class="tf-ion-close"></i></a>
-          </div>
-          <!-- / Cart Item -->
-
-          <div class="cart-summary">
-            <span class="h6">Total</span>
-            <span class="total-price h6">$1799.00</span>
-
-            <div class="text-center cart-buttons mt-3">
-              <a
-                routerLink="/cart"
-                class="btn btn-small btn-transparent btn-block"
-                >View Cart</a
-              >
-              <a routerLink="/checkout" class="btn btn-small btn-main btn-block"
-                >Checkout</a
-              >
-            </div>
-          </div>
+          <a routerLink="/cart" class="btn btn-small btn-transparent btn-block"
+            >View Cart</a
+          >
+          <a routerLink="/checkout" class="btn btn-small btn-main btn-block"
+            >Checkout</a
+          >
         </div>
       </li>
-      <li class="list-inline-item">
-        <a href="#"><i class="tf-ion-ios-person mr-3"></i></a>
+
+      <li class="dropdown cart-nav dropdown-slide list-inline-item">
+        <a routerLink="/login"><i class="tf-ion-ios-person mr-3"></i></a>
       </li>
     </ul>
   </div>
