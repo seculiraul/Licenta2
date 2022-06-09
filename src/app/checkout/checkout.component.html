@@ -221,6 +221,28 @@
         <div class="col-md-6 col-lg-4">
           <div class="product-checkout-details mt-5 mt-lg-0">
             <h4 class="mb-4 border-bottom pb-4">Order Summary</h4>
+
+            <div *ngFor="let product of orderSummary.products" class="media product-card">
+              <p>{{ product[0] }}</p>
+              <div class="media-body text-right">
+                <p class="h5">{{ product[1] }}</p>
+              </div>
+            </div>
+            <ul class="summary-prices list-unstyled mb-4">
+              <li class="d-flex justify-content-between">
+                <span>Subtotal:</span>
+                <span class="h5">{{ orderSummary.total }}</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Shipping:</span>
+                <span class="h5">{{ orderSummary.shipping === 0 ? 'free' : orderSummary.shipping }}</span>
+              </li>
+              <li class="d-flex justify-content-between">
+                <span>Total</span>
+                <span class="h5">{{ orderSummary.total + orderSummary.shipping }}</span>
+              </li>
+            </ul>
+
             <form action="#">
               <div class="form-check mb-3">
                 <input
