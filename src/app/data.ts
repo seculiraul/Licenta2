@@ -198,7 +198,7 @@ export const products: Produs[] = [
         img: 'assets/images/mere-verzi.jpg',
         pret: '7.39 Ron',
         descriere: 'Tara de origine:Romania, 1kg  ' ,
-        isNew: false
+        isNew: true
     },
     {
         nume: 'Struguri albi fara seminte ',
@@ -261,7 +261,7 @@ export const products: Produs[] = [
         img: 'assets/images/banane.jpg',
         pret: '7.79 Ron',
         descriere: 'De import, tara de origine:Columbia, 1kg'  ,
-        isNew: true
+        isNew: false
     },
     {
         nume: 'Rosii cherry',
