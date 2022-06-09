@@ -173,19 +173,21 @@
             <div
               class="custom-control custom-checkbox"
               *ngFor="let categorie of categorii"
+              #div
             >
               <input
                 type="checkbox"
+                [value]="categorie"
                 class="custom-control-input"
                 id="size1"
-                checked
+                unchecked
               />
               <label class="custom-control-label" for="size1">{{
                 categorie
               }}</label>
             </div>
           </section>
-          <button type="button" class="btn btn-black btn-small">Filter</button>
+          <button type="button" class="btn btn-black btn-small" (click)="filter()">Filter</button>
         </form>
         <!-- popular product -->
         <section class="widget widget-popular mb-5">
