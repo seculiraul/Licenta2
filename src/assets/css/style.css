@@ -439,6 +439,18 @@ a.text-primary:hover {
   padding: 10px 20px;
   background: #757575;
 }
+.rosiiHome{
+  height: 200px;
+  margin-left: 40px;
+}
+.cartofiDulciHome{
+height: 200px;
+margin-left: 70px;
+}
+.mozzarellaHome{
+  height:200px;
+  margin-left: 60px;
+}
 .page-header-login{
   background: #f5f5f5;
   background: url("../images/login.jpg") no-repeat 50% 50%;
