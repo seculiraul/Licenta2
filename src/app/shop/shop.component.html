@@ -30,12 +30,14 @@
                     name="orderby"
                     class="orderby form-control"
                     aria-label="Shop order"
+                    #val
+                    (change)="sort(val)"
                   >
                     <option value="default" selected="selected">
                       Default sorting
                     </option>
                     <option value="nameAz">Sort by name A-Z</option>
-                    <option value="numeZa">Sort by name Z-A</option>
+                    <option value="nameZa">Sort by name Z-A</option>
                     <option value="priceLow">Sort by price: low to high</option>
                     <option value="priceHigh">Sort by price: high to low</option>
                   </select>
