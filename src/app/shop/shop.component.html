@@ -76,6 +76,7 @@
         <section class="widget widget-sizes mb-5">
           <h3 class="widget-title h4 mb-4">Shop by Category</h3>
           <div
+            #div
             class="custom-control custom-checkbox"
             *ngFor="let categorie of categorii"
           >
@@ -83,14 +84,15 @@
               type="checkbox"
               class="custom-control-input"
               id="size1"
-              checked
+              [value]="categorie"
+              unchecked
             />
             <label class="custom-control-label" for="size1">{{
               categorie
             }}</label>
           </div>
         </section>
-        <button type="button" class="btn btn-black btn-small">Filter</button>
+        <button type="button" class="btn btn-black btn-small" (click)="filter()">Filter</button>
       </div>
     </div>
   </div>
