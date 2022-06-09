@@ -34,7 +34,7 @@ export class ShopComponent implements OnInit {
       this.dataService.sortPriceLow(this.produse);
     } else if(sortBy === 'priceHigh') {
       this.dataService.sortPriceHigh(this.produse);
-    } else if(sortBy === 'Default'){
+    } else if(sortBy === 'default'){
       this.produse = this.dataService.sortDefault(this.produse);
     }
 
