@@ -42,7 +42,7 @@
                   <td class="product-name">{{ orderItem?.product?.nume }}</td>
                   <td class="product-price">{{ orderItem?.product?.pret }}</td>
                   <td class="product-quantity">{{ orderItem?.quantity }}</td>
-                  <td class="product-subtotal">{{ orderItem.product.pret * orderItem.quantity }}</td>
+                  <td class="product-subtotal">{{ +orderItem.product.pret * orderItem.quantity }}</td>
                   <td class="product-subtotal">
                     {{ orderItem?.product?.pret }}
                   </td>
