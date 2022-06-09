@@ -42,6 +42,7 @@
                   <td class="product-name">{{ orderItem?.product?.nume }}</td>
                   <td class="product-price">{{ orderItem?.product?.pret }}</td>
                   <td class="product-quantity">{{ orderItem?.quantity }}</td>
+                  <td class="product-subtotal">{{ +orderItem.product.pret * orderItem.quantity }}</td>
                   <td class="product-subtotal">
                     {{ orderItem?.product?.pret }}
                   </td>
@@ -69,19 +70,19 @@
           <li class="d-flex justify-content-between pb-2 mb-3">
             <br />
             <h5>Shipping</h5>
-            <span>free</span>
+            <span>{{ shippingTax }}</span>
             <br />
           </li>
           <li class="d-flex justify-content-between pb-2">
             <br />
             <h5>Total</h5>
-            <span>231123</span>
+            <span>{{ total }}</span>
             <br />
           </li>
           <br />
         </ul>
         <br />
-        <a routerLink="/checkout" class="btn btn-main btn-small"
+        <a (click)="toCheckout()" class="btn btn-main btn-small"
           >Proceed to checkout</a
         ><br />
       </div>
