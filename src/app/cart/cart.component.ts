@@ -20,7 +20,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.orderItems = this.orderService.getCurrentOrder();
     this.total = this.orderItems.reduce((accumulator, current) => {
-     return accumulator + (current.product.pret * current.quantity)
+     return accumulator + (+current.product.pret * current.quantity)
     }, 0);
     this.shippingTax = this.total < 39 ? 5 : 0;
   }
