@@ -439,13 +439,63 @@ a.text-primary:hover {
   padding: 10px 20px;
   background: #757575;
 }
-
-.page-header {
+.page-header-login{
   background: #f5f5f5;
-  background: url("../images/header-bg.jpg") no-repeat 50% 50%;
+  background: url("../images/login.jpg") no-repeat 50% 50%;
   background-size: cover;
   padding: 60px 0px;
+  height: 80%;
   position: relative;
+}
+.page-header-shop {
+  background: #f5f5f5;
+  background: url("../images/shop1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 60px 0px;
+  height: 80%;
+  position: relative;
+}
+.page-header-cart {
+  background: #f5f5f5;
+  background: url("../images/cart1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 60px 0px;
+  height: 80%;
+  position: relative;
+}
+.page-header-checkout {
+  background: #f5f5f5;
+  background: url("../images/checkout1.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 60px 0px;
+  height: 80%;
+  position: relative;
+}
+.page-header-product {
+  background: #f5f5f5;
+  background: url("../images/product-single.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  padding: 60px 0px;
+  height: 80%;
+  position: relative;
+}
+.login-h1{
+  margin-top: 80px;
+}
+.checkout-h1 {
+  margin-left: 15px;
+  margin-top: 115px;
+}
+.cart-h1 {
+  margin-left: 15px;
+  margin-top: 115px;
+}
+.shop-h1 {
+  margin-left: 15px;
+  margin-top: 115px;
+}
+.product-single-h1{
+  margin-top: -50px;
 }
 
 .page-header h1 {

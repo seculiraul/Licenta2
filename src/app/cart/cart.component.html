@@ -1,12 +1,12 @@
-<section class="page-header">
+<section class="page-header-cart">
   <div class="overly"></div>
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="row">
       <div class="col-lg-6">
-        <div class="content text-center">
-          <h1 class="mb-3">Cart</h1>
+        <div class="content">
+          <h1 class="cart-h1">Cart</h1>
           <nav aria-label="breadcrumb">
-            <ol class="breadcrumb bg-transparent justify-content-center">
+            <ol class="breadcrumb bg-transparent">
               <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">Cart</li>
             </ol>
@@ -36,11 +36,17 @@
                   <th class="product-remove"></th>
                 </tr>
                 <tr *ngFor="let orderItem of orderItems">
-                  <td class="product-thumbnail"><img [src]="orderItem?.product?.img"></td>
+                  <td class="product-thumbnail">
+                    <img [src]="orderItem?.product?.img" />
+                  </td>
                   <td class="product-name">{{ orderItem?.product?.nume }}</td>
                   <td class="product-price">{{ orderItem?.product?.pret }}</td>
                   <td class="product-quantity">{{ orderItem?.quantity }}</td>
                   <td class="product-subtotal">{{ orderItem.product.pret * orderItem.quantity }}</td>
+                  <td class="product-subtotal">
+                    {{ orderItem?.product?.pret }}
+                  </td>
+                </tr>
               </thead>
             </table>
           </form>

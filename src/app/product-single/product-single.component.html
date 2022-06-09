@@ -1,10 +1,9 @@
-<section class="page-header">
+<section class="page-header-product">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-lg-6">
         <div class="content text-center">
-          <h1 class="mb-3">Product Single</h1>
-          <p>We bring to you only the highest quality products</p>
+          <h1 class="product-single-h1">Product Single Page</h1>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent justify-content-center">
               <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
@@ -29,17 +28,14 @@
         <div class="single-product-details mt-5 mt-lg-0">
           <h2>{{ produs?.nume }}</h2>
           <div class="sku_wrapper mb-4">
-            ID Produs <span class="text-muted">#502ADF{{ produs?.id }} </span>
+            ID Produs <span class="text-muted">#{{ produs?.id }} </span>
           </div>
           <hr />
 
           <h3 class="product-price">{{ produs?.pret }} RON</h3>
 
           <p class="product-description my-4">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum
-            ipsum dicta quod, quia doloremque aut deserunt commodi quis. Totam a
-            consequatur beatae nostrum, earum consequuntur? Eveniet consequatur
-            ipsum dicta recusandae.
+            {{ produs?.descriere }}
           </p>
           <form class="cart" action="#" method="post">
             <div class="quantity d-flex align-items-center">
@@ -55,17 +51,18 @@
                 size="4"
                 #quantity
               />
-              <a class="btn btn-main btn-small" (click)="addToCart(quantity)">Add to cart</a>
+              <a class="btn btn-main btn-small" (click)="addToCart(quantity)"
+                >Add to cart</a
+              >
             </div>
           </form>
 
           <div class="products-meta mt-4">
             <div class="product-category d-flex align-items-center">
               <span class="font-weight-bold text-capitalize product-meta-title"
-                >Categories :</span
+                >Categories:</span
               >
-              <a href="#">Products , </a>
-              <a href="#">Soap</a>
+              <a>{{ produs?.categorie }} </a>
             </div>
           </div>
         </div>
