@@ -39,7 +39,9 @@
                     <option value="nameAz">Sort by name A-Z</option>
                     <option value="nameZa">Sort by name Z-A</option>
                     <option value="priceLow">Sort by price: low to high</option>
-                    <option value="priceHigh">Sort by price: high to low</option>
+                    <option value="priceHigh">
+                      Sort by price: high to low
+                    </option>
                   </select>
                   <input type="hidden" name="paged" value="1" />
                 </form>
@@ -59,6 +61,7 @@
                     class="img-fluid w-100 mb-3 img-first"
                     [src]="produs?.img"
                     alt="product-img"
+                    style="height: 250px"
                 /></a>
               </div>
               <div class="product-info">
@@ -66,7 +69,7 @@
                   <a routerLink="/product-single">{{ produs.nume }}</a>
                 </h2>
                 <span class="price">
-                  {{ produs?.pret }}
+                  {{ produs?.pret + " Ron" }}
                 </span>
               </div>
             </div>
@@ -93,7 +96,13 @@
             }}</label>
           </div>
         </section>
-        <button type="button" class="btn btn-black btn-small" (click)="filter()">Filter</button>
+        <button
+          type="button"
+          class="btn btn-black btn-small"
+          (click)="filter()"
+        >
+          Filter
+        </button>
       </div>
     </div>
   </div>

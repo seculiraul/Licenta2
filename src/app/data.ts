@@ -2,7 +2,7 @@ import { Produs } from "./produs.model";
 
 export const products: Produs[] = [
     {
-        nume: 'lapte Napolact',
+        nume: 'Lapte Napolact',
         categorie: 'Dairy',
         id: '1',
         img: 'assets/images/lapte-napolact.jpg',
@@ -11,7 +11,7 @@ export const products: Produs[] = [
         isNew: false,
     },
     {
-        nume: 'lapte Zuzu',
+        nume: 'Lapte Zuzu',
         categorie: 'Dairy',
         id: '2',
         img: 'assets/images/lapte-zuzu2.jpg',
@@ -20,7 +20,7 @@ export const products: Produs[] = [
         isNew: true
     },
     {
-        nume: 'lapte laDorna',
+        nume: 'Lapte laDorna',
         categorie: 'Dairy',
         id: '3',
         img: 'assets/images/lapte-ladorna2.jpg',
@@ -29,7 +29,7 @@ export const products: Produs[] = [
         isNew: true
     },
     {
-        nume: 'lapte integral Zuzu',
+        nume: 'Lapte integral Zuzu',
         categorie: 'Dairy',
         id: '4',
         img: 'assets/images/lapte-integral-zuzu2.jpg',
@@ -38,7 +38,7 @@ export const products: Produs[] = [
         isNew: false
     },
     {
-        nume: 'lapte semideregresat Zuzu',
+        nume: 'Lapte semideregresat Zuzu',
         categorie: 'Dairy',
         id: '5',
         img: 'assets/images/lapte-semidegresat-zuzu2.jpg',
@@ -47,7 +47,7 @@ export const products: Produs[] = [
         isNew: true
     },
     {
-        nume: 'iaurt Olympus',
+        nume: 'Iaurt Olympus',
         categorie: 'Dairy',
         id: '6',
         img: 'assets/images/iaurt-olympus.jpg',
@@ -56,7 +56,7 @@ export const products: Produs[] = [
         isNew: true
     },
     {
-        nume: 'iaurt Napolact',
+        nume: 'Iaurt Napolact',
         categorie: 'Dairy',
         id: '7',
         img:'assets/images/IAURT-CREMOS-NAPOLACT-BIO.jpg',

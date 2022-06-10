@@ -146,12 +146,15 @@
                 class="img-fluid w-100 mb-3 img-first"
                 [src]="product.img"
                 alt="product-img"
+                style="height: 250px"
             /></a>
           </div>
 
           <span class="onsale">NEW</span>
           <div class="product-hover-overlay">
-            <a><i class="tf-ion-android-cart" (click)="addToCart(product)"></i></a>
+            <a
+              ><i class="tf-ion-android-cart" (click)="addToCart(product)"></i
+            ></a>
           </div>
 
           <div class="product-info">
@@ -159,7 +162,7 @@
               <a href="#">{{ product.nume }}</a>
             </h2>
             <span class="price">
-              {{ product.pret }}
+              {{ product.pret + " Ron" }}
             </span>
           </div>
         </div>
