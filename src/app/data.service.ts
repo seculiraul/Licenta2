@@ -1,4 +1,7 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
+import { Observable } from 'rxjs';
 import { products } from './data';
 import { Produs } from './produs.model';
 
@@ -7,8 +10,15 @@ import { Produs } from './produs.model';
 })
 export class DataService {
   produse: Produs[] = products.slice();
+  itemCollection!:AngularFirestoreCollection<Produs>;
+  items!:Observable<Produs[]>
 
-  constructor() { }
+  constructor(private fire:AngularFirestore) {
+    this.items = this.fire.collection<Produs>('Produse').valueChanges();
+   }
+   getItems(){
+     return this.items;
+   }
   getCategory() {
     return [... new Set(this.produse.map(produse => produse.categorie))];
   }

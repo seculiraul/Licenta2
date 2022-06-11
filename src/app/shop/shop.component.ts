@@ -21,6 +21,7 @@ export class ShopComponent implements OnInit {
     this.produse = this.dataService.getAllProducts();
     this.categorii = this.dataService.getCategory();
     this.sub.subscribe(prod => this.produse = prod);
+    this.dataService.getItems().subscribe(item => console.log(item.length));
   }
 
 
