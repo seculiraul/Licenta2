@@ -16,7 +16,6 @@ export class DataService {
   constructor(private fire:AngularFirestore) {
     this.items = this.fire.collection<Produs>('Produse').valueChanges();
     this.items.subscribe(items => this.produse = items);
-    //this.produse = this.fire.collection<Produs>('Produse').valueChanges().subscribe
    }
    getItems(){
      return this.items;
@@ -30,7 +29,6 @@ export class DataService {
   }
 
   getNewProducts(): Produs[] {
-    console.log(this.produse);
     return this.produse.filter(produs => produs.isNew === true);
   }
 
