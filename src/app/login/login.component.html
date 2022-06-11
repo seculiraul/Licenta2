@@ -10,7 +10,19 @@
               <li class="breadcrumb-item active" aria-current="page">Login</li>
             </ol>
             <div>
-              <button (click)="loginGoogle()" class="btn btn-primary">
+              <form [formGroup]="form" (ngSubmit)="login()">
+                <div>
+                  <label for="username">Username</label>
+                  <input type="text"
+                  formControlName="username">
+                </div>
+                <div>
+                  <label for="password">Password</label>
+                  <input type="password"
+                  formControlName="password">
+                </div>
+              </form>
+              <button type="button" (click)="login()" class="btn btn-primary">
                 Login with Google
               </button>
             </div>
