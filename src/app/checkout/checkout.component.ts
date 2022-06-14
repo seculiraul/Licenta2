@@ -1,7 +1,9 @@
 import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { CheckoutCartService } from '../checkout-cart.service';
+import { OrderService } from '../order.service';
 import { OrderSummary } from '../OrderSummary.model';
+import { FinalOrder } from '../finalOrder.model';
 
 @Component({
   selector: 'app-checkout',
@@ -15,6 +17,11 @@ export class CheckoutComponent implements OnInit {
 
   ngOnInit(): void {
     this.orderSummary = this.checkoutService.getCrtOrdValues();
+  }
+
+  addOrderToUser() {
+    console.log('adaugat');
+   this.checkoutService.addOrderToUser(this.orderSummary.total, this.orderSummary.shipping);
   }
 
 
