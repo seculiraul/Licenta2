@@ -3,7 +3,7 @@ import { Produs } from "./produs.model";
 export const products: Produs[] = [
     {
         nume: 'Lapte Napolact',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '1',
         img: 'assets/images/lapte-napolact.jpg',
         pret: 6.65,
@@ -12,7 +12,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Lapte Zuzu',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '2',
         img: 'assets/images/lapte-zuzu2.jpg',
         pret: 11.60,
@@ -21,7 +21,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Lapte laDorna',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '3',
         img: 'assets/images/lapte-ladorna2.jpg',
         pret: 6.50,
@@ -30,7 +30,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Lapte integral Zuzu',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '4',
         img: 'assets/images/lapte-integral-zuzu2.jpg',
         pret: 6.50,
@@ -39,7 +39,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Lapte semideregresat Zuzu',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '5',
         img: 'assets/images/lapte-semidegresat-zuzu2.jpg',
         pret: 9.50,
@@ -48,7 +48,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Iaurt Olympus',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '6',
         img: 'assets/images/iaurt-olympus.jpg',
         pret: 2.30,
@@ -57,7 +57,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Iaurt Napolact',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '7',
         img:'assets/images/IAURT-CREMOS-NAPOLACT-BIO.jpg',
         pret: 3.50,
@@ -66,7 +66,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Chefir Napolact',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'8',
         img: 'assets/images/chefir.jpg',
         pret: 3.60,
@@ -75,7 +75,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Sana usoara Napolact',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'9',
         img: 'assets/images/sana-usoara-napolact.jpg',
         pret: 3.55,
@@ -84,7 +84,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Actimel Danone',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'10',
         img: 'assets/images/actimel2.jpg',
         pret: 16,
@@ -93,7 +93,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Almette',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'11',
         img: 'assets/images/almette.jpg',
         pret: 6,
@@ -102,7 +102,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Philadelphia',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'12',
         img: 'assets/images/philadelphia.jpg',
         pret: 11,
@@ -111,7 +111,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Cascasval feliat Hochland',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'13',
         img: 'assets/images/cascaval-feliat.jpg',
         pret: 13.80,
@@ -120,7 +120,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Telemea Hochland',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'14',
         img: 'assets/images/telemea.jpg',
         pret: 24,
@@ -129,7 +129,7 @@ export const products: Produs[] = [
     },
     {
         nume:'Branza topita Hochland',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id:'15',
         img: 'assets/images/branza-topita.jpg',
         pret: 5.90,
@@ -229,7 +229,7 @@ export const products: Produs[] = [
     },
     {
         nume: 'Mozzarella 300g',
-        categorie: 'Dairy',
+        categorie: 'Lactate',
         id: '26',
         img: 'assets/images/mozzarela.jpg',
         pret: 20,
