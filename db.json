@@ -1,0 +1,115 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "orders": [
+        {
+          "id": "1",
+          "obiecte": [
+            {
+              "product":
+                {
+                  "nume": "Lapte integral Zuzu",
+                  "categorie": "Dairy",
+                  "id": "4",
+                  "img": "assets/images/lapte-integral-zuzu2.jpg",
+                  "pret": 6.50,
+                  "descriere": "Lapte integral Zuzu, 3.5% grasime, 1L",
+                  "isNew": false
+                },
+                "quantity": 2
+            },
+            {
+              "product":
+              {
+                "nume": "Branza",
+                "categorie": "Dairy",
+                "id": "5",
+                "img": "assets/images/lapte-integral-zuzu2.jpg",
+                "pret": 7.50,
+                "descriere": "Lapte integral Zuzu, 3.5% grasime, 1L",
+                "isNew": false
+              },
+              "quantity": 1
+            }
+          ],
+          "total": 12,
+          "transport": 5
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "username": "client",
+      "orders": [
+        {
+          "id": "1",
+          "obiecte": [
+            {
+              "product":
+                {
+                  "nume": "Lapte integral Zuzu",
+                  "categorie": "Dairy",
+                  "id": "4",
+                  "img": "assets/images/lapte-integral-zuzu2.jpg",
+                  "pret": 6.50,
+                  "descriere": "Lapte integral Zuzu, 3.5% grasime, 1L",
+                  "isNew": false
+                },
+                "quantity": 2
+            },
+            {
+              "product":
+              {
+                "nume": "Branza",
+                "categorie": "Dairy",
+                "id": "5",
+                "img": "assets/images/lapte-integral-zuzu2.jpg",
+                "pret": 7.50,
+                "descriere": "Lapte integral Zuzu, 3.5% grasime, 1L",
+                "isNew": false
+              },
+              "quantity": 1
+            }
+          ],
+          "total": 12,
+          "transport": 5
+        },
+        {
+          "id": "2",
+          "obiecte": [
+            {
+              "product":
+                {
+                  "nume": "Carne",
+                  "categorie": "Dairy",
+                  "id": "4",
+                  "img": "assets/images/lapte-integral-zuzu2.jpg",
+                  "pret": 6.50,
+                  "descriere": "Lapte integral Zuzu, 3.5% grasime, 1L",
+                  "isNew": false
+                },
+                "quantity": 2
+            },
+            {
+              "product":
+              {
+                "nume": "Branza",
+                "categorie": "Dairy",
+                "id": "5",
+                "img": "assets/images/lapte-integral-zuzu2.jpg",
+                "pret": 7.50,
+                "descriere": "Lapte integral Zuzu, 3.5% grasime, 1L",
+                "isNew": false
+              },
+              "quantity": 1
+            }
+          ],
+          "total": 12,
+          "transport": 0
+        }
+      ]
+    }
+  ]
+}

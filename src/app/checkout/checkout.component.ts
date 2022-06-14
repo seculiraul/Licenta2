@@ -4,6 +4,7 @@ import { CheckoutCartService } from '../checkout-cart.service';
 import { OrderService } from '../order.service';
 import { OrderSummary } from '../OrderSummary.model';
 import { FinalOrder } from '../finalOrder.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -13,15 +14,16 @@ import { FinalOrder } from '../finalOrder.model';
 export class CheckoutComponent implements OnInit {
 
   orderSummary!: OrderSummary
-  constructor(private checkoutService: CheckoutCartService) { }
+  constructor(private checkoutService: CheckoutCartService, private router: Router) { }
 
   ngOnInit(): void {
     this.orderSummary = this.checkoutService.getCrtOrdValues();
   }
 
   addOrderToUser() {
-    console.log('adaugat');
+   console.log('adaugat');
    this.checkoutService.addOrderToUser(this.orderSummary.total, this.orderSummary.shipping);
+   this.router.navigate(['/order-placed']);
   }
 
 

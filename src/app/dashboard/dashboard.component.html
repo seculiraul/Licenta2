@@ -32,6 +32,26 @@
         <a href="#">recent orders</a>, manage your
         <a href="#">shipping and billing addresses</a> and
         <a href="#">edit your password and account details</a>.
+        <table
+        class="table shop_table shop_table_responsive cart"
+        cellspacing="0"
+      >
+        <thead>
+          <tr>
+            <th class="product-name">Id Comanda</th>
+            <th class="product-price">Total</th>
+            <th class="product-quantity">Transport</th>
+          </tr>
+          <tr  *ngFor="let order of user.orders">
+            <td class="product-thumbnail">{{ order.id }}
+            </td>
+            <td class="product-name">{{ order.total }}</td>
+            <td class="product-price">
+              {{ order.transport }}
+            </td>
+          </tr>
+        </thead>
+      </table>
       </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { filter, single, Subject } from 'rxjs';
@@ -9,8 +10,9 @@ import { User } from './user.model';
 export class UserService {
 
   user!: User
+  url = 'http://localhost:3000/users/';
   userSubject: Subject<User> = new Subject<User>();
-  constructor(private fire: AngularFirestore) {
+  constructor(private fire: AngularFirestore, private http: HttpClient) {
     this.user = {
       id: '',
       username: '',
@@ -21,10 +23,10 @@ export class UserService {
 
 
   login(username: string) {
-    let allUsers: User[] =[]
-   this.fire.collection<User>('Users').valueChanges()
-   .subscribe(users => allUsers = users);
-   this.updateUser(allUsers.filter(user => user.username === username)[0]);
+    this.http.get<User>(this.url+username).subscribe(user => {
+      console.log(user);
+      this.user = user;
+      this.userSubject.next(user)});
   }
 
   updateUser(user: User) {
@@ -32,7 +34,7 @@ export class UserService {
   }
 
   getUser() {
-    return this.userSubject;
+    return this.user;
   }
 
   logOut() {
