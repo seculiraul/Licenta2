@@ -9,12 +9,13 @@ import { Produs } from './produs.model';
   providedIn: 'root'
 })
 export class DataService {
-  produse: Produs[] = products.slice();
+  produse: Produs[] = [];
   itemCollection!:AngularFirestoreCollection<Produs>;
   items!:Observable<Produs[]>
 
   constructor(private fire:AngularFirestore) {
     this.items = this.fire.collection<Produs>('Produse').valueChanges();
+    this.items.subscribe(items => this.produse = items);
    }
    getItems(){
      return this.items;
