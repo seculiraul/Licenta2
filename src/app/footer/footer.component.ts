@@ -15,7 +15,9 @@ export class FooterComponent implements OnInit {
 
 
   toShop() {
-    this.router.navigate(['/shop']);
+    this.router.navigate(['/shop'], {queryParams: {
+      sort: 'Lactate'
+    }});
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from '../user.model';
 import { UserService } from '../user.service';
 
@@ -12,7 +13,7 @@ export class LoginComponent implements OnInit {
 
   form!: FormGroup;
   us!: User
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private router: Router) {
     this.form = new FormGroup({
       username: new FormControl(''),
       password: new FormControl('')
@@ -33,6 +34,7 @@ export class LoginComponent implements OnInit {
     } else {
       this.userService.login('2');
     }
+    this.router.navigate(['/']);
   }
 
 

@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from '../data.service';
 import { OrderService } from '../order.service';
 import { Produs } from '../produs.model';
+import { User } from '../user.model';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-product-single',
@@ -13,7 +16,16 @@ export class ProductSingleComponent implements OnInit {
 
   id!: number;
   produs!: Produs;
-  constructor(private dataService: DataService, private route: ActivatedRoute, private router: Router, private orderService: OrderService) { }
+  visible = '';
+  constructor(private dataService: DataService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private orderService: OrderService,
+    private userSv: UserService,
+    private firebase: AngularFirestore) {
+    this.visible = this.userSv.getUser().username === 'admin' ? 'visible' : 'hidden';
+
+   }
 
   ngOnInit(): void {
     this.route.params.subscribe(
@@ -27,5 +39,10 @@ export class ProductSingleComponent implements OnInit {
 
   addToCart(quantity: any) {
     this.orderService.addCurrentOrder(this.produs, +quantity.value);
+  }
+
+  stergereProdus() {
+    this.firebase.collection('Produse').doc(this.id.toString()).delete().then(()=> this.router.navigate(['/']));
+    //this.router.navigate(['/'])
   }
 }

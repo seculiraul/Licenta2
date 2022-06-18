@@ -36,9 +36,10 @@ export class CartComponent implements OnInit {
     };
     this.checkoutService.setCurentOrder(orderSummary);
     const user = this.userSv.getUser();
+    const lastOrderId =  +user.orders.length;
     user.orders.push(
       {
-        id: "3",
+        id: (lastOrderId + 1).toString(),
         obiecte: this.orderItems,
         total: this.total,
         transport: this.shippingTax

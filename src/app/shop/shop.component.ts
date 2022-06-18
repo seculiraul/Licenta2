@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject } from 'rxjs';
 import { DataService } from '../data.service';
 import { Produs } from '../produs.model';
@@ -15,13 +16,22 @@ export class ShopComponent implements OnInit {
   categorii!: string[];
   produse!: Produs[];
   sub = new Subject<Produs[]>();
-  constructor(private dataService:DataService) { }
+  queryParam ='';
+  constructor(private dataService:DataService, private route: ActivatedRoute) { 
+  }
 
   ngOnInit(): void {
     this.produse = this.dataService.getAllProducts();
     this.categorii = this.dataService.getCategory();
     this.sub.subscribe(prod => this.produse = prod);
     this.dataService.getItems().subscribe(item => console.log(item.length));
+    this.route.queryParams.subscribe(param => {
+      if(param['sort']) {
+      const filtrare = this.dataService.getForCategory([param['sort']]);
+      this.sub.next(filtrare);
+     //console.log([param['sort']])
+      }
+    });
   }
 
 
