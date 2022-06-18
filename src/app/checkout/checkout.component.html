@@ -1,4 +1,5 @@
 <section class="page-header-checkout">
+  <div class="overly"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
@@ -6,7 +7,9 @@
           <h1 class="checkout-h1">Plata si Facturare</h1>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent">
-              <li class="breadcrumb-item"><a routerLink="/">Acasa</a></li>
+              <li class="breadcrumb-item text-color">
+                <a routerLink="/">Acasa</a>
+              </li>
               <li class="breadcrumb-item active" aria-current="page">
                 Plata si Facturare
               </li>
@@ -237,9 +240,9 @@
                 <span class="h5">{{ orderSummary.total }}</span>
               </li>
               <li class="d-flex justify-content-between">
-                <span>Shipping:</span>
+                <span>Livrare:</span>
                 <span class="h5">{{
-                  orderSummary.shipping === 0 ? "free" : orderSummary.shipping
+                  orderSummary.shipping === 0 ? "0 RON" : orderSummary.shipping
                 }}</span>
               </li>
               <li class="d-flex justify-content-between">
@@ -274,17 +277,23 @@
                   id="exampleCheck3"
                 />
                 <label class="form-check-label" for="exampleCheck3"
-                  >I have read and agree to the website terms and conditions
-                  *</label
+                  >Am citit si sunt de acord cu termenii si conditiile
+                  site-ului. *</label
                 >
               </div>
             </form>
             <div class="info mt-4 border-top pt-4 mb-5">
-              Your personal data will be used to process your order, support
-              your experience throughout this website, and for other purposes
-              described in our <a href="#">privacy policy</a>
+              Datele dumneavoastră cu caracter personal vor fi utilizate pentru
+              a procesa comanda dvs., pentru a vă sprijini experiența
+              dumneavoastră pe tot parcursul acestui site web și în alte scopuri
+              descrise în <a href="#">Politica noastra de confidentialitate</a>.
             </div>
-            <button class="btn btn-main btn-small" (click)="addOrderToUser()">Place Order</button>
+            <a
+              routerLink="/order-placed"
+              (click)="addOrderToUser()"
+              class="btn btn-main btn-small"
+              >Plaseaza comanda</a
+            >
           </div>
         </div>
       </div>
@@ -301,7 +310,7 @@
             <input
               class="form-control"
               type="text"
-              placeholder="Enter Coupon Code"
+              placeholder="Introdu codul cuponului"
             />
           </div>
           <button
@@ -309,7 +318,7 @@
             class="btn btn-main btn-small"
             data-dismiss="modal"
           >
-            Apply Coupon
+            Aplica cuponul
           </button>
         </form>
       </div>
