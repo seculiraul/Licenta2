@@ -24,10 +24,13 @@ export class CheckoutCartService {
   }
 
   addOrderToUser(total: number , ship: number) {
-    this.userService.getUser().subscribe(user => this.user = user);
+   /* this.userService.getUser().subscribe(user => {
+      console.log(user);
+      this.user = user});
+   // console.log(this.user);
     if(this.user.id) {
       this.user.orders.push({obiecte: this.orderService.getCurrentOrder(), total: total, transport: ship});
-    }
+    }*/
   }
 
 
