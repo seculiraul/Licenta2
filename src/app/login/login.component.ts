@@ -23,10 +23,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  loginGoogle(){
-
-  }
-
   login() {
     const username = this.form.get('username')?.value;
     if(username === 'admin') {
@@ -36,6 +32,4 @@ export class LoginComponent implements OnInit {
     }
     this.router.navigate(['/']);
   }
-
-
 }

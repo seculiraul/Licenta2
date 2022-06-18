@@ -30,9 +30,9 @@
             </tr>
             <tr *ngFor="let order of user.orders">
               <td class="product-thumbnail">{{ order.id }}</td>
-              <td class="product-name">{{ order.total }}</td>
+              <td class="product-name">{{ order.total + " RON" }}</td>
               <td class="product-price">
-                {{ order.transport }}
+                {{ order.transport + " RON" }}
               </td>
             </tr>
           </thead>
